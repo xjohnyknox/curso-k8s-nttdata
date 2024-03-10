@@ -80,6 +80,28 @@ En este curso de 5 días, exploraremos los fundamentos de Kubernetes y cómo usa
 ## Requisitos Previos
 
 - Conocimiento básico de contenedores y Docker.
+- Tener instalado docker en tu ordenador.
+
+## Guia de usuarios
+
+En el lab, se han creado los usuarios:
+`student1..student10`
+
+Y tenemos un repo de ECR en común: TBD
+
+Además, cada usuario tendra su debido:
+
+AWS_ACCESS_KEY_ID="...."
+AWS_SECRET_ACCESS_KEY="...."
+
+La región por defecto sera **us-east-1**
+
+## Configuración en tu ordenador
+
+La idea es que tengas ya descargado el **aws-cli**, si no lo tienes [aquí](https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions) un enlace con más información.
+
+Adicional, vas a tener tus propios keys, para guardarlos en tu terminal.
+
 
 ## Contribuciones
 

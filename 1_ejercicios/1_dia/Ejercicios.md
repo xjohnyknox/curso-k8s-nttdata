@@ -32,12 +32,29 @@ Y veremos el:
 
 `Hola mundo!`
 
+Ahora, vamos a hacer login al repo de ECR que tenemos compartido:
+
+`aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 224746578762.dkr.ecr.us-east-1.amazonaws.com`
+
+Aqui debes usar los datos suministrados por el instructor según tu ambiente.
+
+Luego vamos a tagear la imagen que buildeaste, usando tu student number:
+
+`docker tag my-python-app/student#:1.0 224746578762.dkr.ecr.us-east-1.amazonaws.com/student-shared-repository:my-python-app/student#:1.0`
+
+Y por último vamos a subir esa imagen al repo:
+
+`docker push 224746578762.dkr.ecr.us-east-1.amazonaws.com/student-shared-repository:my-python-app/student#:1.0`
 
 ## 2-wordpress
 
 Aqui tenemos un fichero docker compose, con 2 containers corriendo (db mysql + wordpress), publicando el puerto `8080` y usando unas variables de entorno.
 
-Este ejercicio es más diseñado para probar como exponer una app localmente y acceder a la misma usando docker-compose.
+Este ejercicio es más diseñado para probar como exponer una app y acceder a la misma.
+
+Para esto primero vamos a actualizar nuestra configuración de kubeconfig según nuestro cluster:
+
+`aws eks update-kubeconfig --region us-east-1 --name student-X-cluster`
 
 Nos ubicamos en la carpeta de `2-wordpress`, y luego:
 
@@ -48,6 +65,17 @@ Luego vamos al navegador y abrimos:
 [localhost](http://localhost:8080/)
 
 Viste lo fácil que es usar docker? Ya no necesitas hacer mil pasos para tener un wordpress funcionando en linux.
+
+Ahora vamos a hacerlo en k8s:
+
+helm repo add my-repo https://charts.bitnami.com/bitnami
+
+helm install my-release my-repo/wordpress --set wordpressPassword=password123
+
+export SERVICE_IP=$(kubectl get svc --namespace default wp-demo-wordpress --include "{{ range (index .status.loadBalancer.ingress 0) }}{{ . }}{{ end }}")
+echo "WordPress URL: http://$SERVICE_IP/"
+echo "WordPress Admin URL: http://$SERVICE_IP/admin"
+
 
 ## 3-voting-app
 
