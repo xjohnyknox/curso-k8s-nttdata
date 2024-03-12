@@ -1,9 +1,17 @@
 # Pre Requisitos.
 
+- [Pre Requisitos.](#pre-requisitos)
+  - [1-Instalando-Virtualbox](#1-instalando-virtualbox)
+  - [2-Instalando-MultiPass](#2-instalando-multipass)
+  - [2-1-Configurando-MultiPass](#2-1-configurando-multipass)
+  - [3-Instalando-docker-(OPCIONAL)](#3-instalando-docker-opcional)
+  - [4-Usando-Docker-Compose-(OPCIONAL)](#4-usando-docker-compose-opcional)
+
+
 Como tenemos una restricción por el lado de AWS, vamos a asumir que el lab se hace en tu ordenador, para ello, debemos tener Virtualbox y Multipass (aunque docker desktop podría servir inicialmente, el manejode clusters es más fácil con estos dos).
 
 
-## 1. Instalando Virtualbox.
+## 1-Instalando-Virtualbox
 
 Para el hipervisor, vamos a usar Virtualbox, y como de seguro tienes un ordenador con Windows, aquí lo puedes instalar:
 
@@ -34,7 +42,7 @@ Y listo, ya tenemos instalado el virtualbox:
 
 ![alt text](image-15.png)
 
-## 2. Instalando MultiPass.
+## 2-Instalando-MultiPass
 
 Ahora vamos a descargar el multipass para windows: [Descargar aquí](https://multipass.run/download/windows)
 
@@ -53,7 +61,7 @@ Y si abres el panel de aplicaciones instaladas en windows, veras los dos compone
 
 ![alt text](image-23.png)
 
-## 2. Configurando MultiPass.
+## 2-1-Configurando-MultiPass
 
 Si ya lo tienes instalado, puedes abrir un terminal (CMD en caso de Windows), y debes ejecutar estos comandos:
 
@@ -128,7 +136,7 @@ Y ahora el purge:
 
 `multipass purge`
 
-## 3. Instalando docker (OPCIONAL).
+## 3-Instalando-docker-(OPCIONAL)
 
 Para los ejercicios introductorios, vamos a ver como funcionan los contenedores, por ende se pone opcional el uso de docker desktop.
 
@@ -138,7 +146,7 @@ Y comprobando que funcione:
 
 `docker run --rm alpine echo "Hola mundo"`
 
-## 4. Usando Docker Compose (OPCIONAL).
+## 4-Usando-Docker-Compose-(OPCIONAL)
 
 `docker-compose up -d`
 
