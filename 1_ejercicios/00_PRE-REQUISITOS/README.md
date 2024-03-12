@@ -1,8 +1,12 @@
 # Pre Requisitos.
 
-## 0. Instalando Virtualbox.
+Como tenemos una restricción por el lado de AWS, vamos a asumir que el lab se hace en tu ordenador, para ello, debemos tener Virtualbox y Multipass (aunque docker desktop podría servir inicialmente, el manejode clusters es más fácil con estos dos).
 
-Vamos a instalar Virtualbox:
+
+## 1. Instalando Virtualbox.
+
+Para el hipervisor, vamos a usar Virtualbox, y como de seguro tienes un ordenador con Windows, aquí lo puedes instalar:
+
 [Para Windows](https://download.virtualbox.org/virtualbox/7.0.14/VirtualBox-7.0.14-161095-Win.exe)
 
 Cuando lo instale yo, me salía este error:
@@ -30,13 +34,15 @@ Y listo, ya tenemos instalado el virtualbox:
 
 ![alt text](image-15.png)
 
-Luego descargamos el multipass para windows: [Descargar aquí](https://multipass.run/download/windows)
+## 2. Instalando MultiPass.
+
+Ahora vamos a descargar el multipass para windows: [Descargar aquí](https://multipass.run/download/windows)
 
 ![alt text](image-16.png)
 ![alt text](image-17.png)
 ![alt text](image-18.png)
 
-Seleccionamos Oracle VM Virtualbox:
+Al momento de esta ventana, debemos seleccionar: **Oracle VM Virtualbox**:
 ![alt text](image-19.png)
 
 ![alt text](image-20.png)
@@ -47,7 +53,9 @@ Y si abres el panel de aplicaciones instaladas en windows, veras los dos compone
 
 ![alt text](image-23.png)
 
-## 1. Instalando docker (OMITIR).
+## 3. Instalando docker (OPCIONAL).
+
+Para los ejercicios introductorios, vamos a ver como funcionan los contenedores, por ende se pone opcional el uso de docker desktop.
 
 ![Alt text](image-2.png)
 
@@ -55,11 +63,11 @@ Y comprobando que funcione:
 
 `docker run --rm alpine echo "Hola mundo"`
 
-## 2. Usando Docker Compose.
+## 4. Usando Docker Compose (OPCIONAL).
 
 `docker-compose up -d`
 
-## 3. Instalando MiniKube
+<!-- ## 3. Instalando MiniKube
 
 Primero vamos a descargar e instalar el binario según sea nuestra plataforma:[MacOS, Linux, Windows](https://minikube.sigs.k8s.io/docs/start/)
 
@@ -86,4 +94,4 @@ minikube
 
 Podemos ir a `minikube dashboard` para ver la interfaz gráfica que honestamente, nadie usa:
 
-![Alt text](image-1.png)
+![Alt text](image-1.png) -->

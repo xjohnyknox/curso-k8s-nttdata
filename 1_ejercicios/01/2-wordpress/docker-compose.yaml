@@ -3,7 +3,7 @@ version: '3.1'
 services:
 
   wordpress:
-    image: wordpress #arm64v8/wordpress en Mac M1
+    image: wordpress # arm64v8/wordpress en Mac M1
     restart: always
     ports:
       - 8080:80
@@ -16,7 +16,7 @@ services:
       - wordpress:/var/www/html
 
   db:
-    image: mysql:5.7 #arm64v8/mysql en ARM Mac
+    image: mysql # arm64v8/mysql en ARM Mac
     restart: always
     environment:
       MYSQL_DATABASE: exampledb
