@@ -19,7 +19,7 @@ spec:
       hostNetwork: true
       serviceAccountName: kubedoom
       containers:
-        - image: ghcr.io/storax/kubedoom:latest
+        - image: storaxdev/kubedoom:0.5.0
           env:
             - name: NAMESPACE
               value: default

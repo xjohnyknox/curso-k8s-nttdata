@@ -55,9 +55,8 @@ Para esto, vamos a aplicar el manifiesto de esta carpeta.
 
 Luego vamos a actualizar la imagen de nginx:1.9.1 a nginx:1.7.9
 
-`kubectl --record deployment.apps/nginx-deployment set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1`
+`kubectl deployment.apps/nginx-deployment set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1`
 
-Importante aqui resaltar que usamos la opción `--record`, para dejar un histórico del cambio.
 
 No es la única manera, también podriamos editar el deployment directamente, aunque no se recomienda.
 
@@ -67,7 +66,7 @@ Ahora vamos a ver el estado del deployment:
 
 Y vamos a provocar un caos:
 
-`kubectl set image deployment nginx-deployment nginx=nginx:1.9099 --record=true`
+`kubectl set image deployment nginx-deployment nginx=nginx:1.9099`
 
 Como podemos hacer un rollback de cambios a la versión que antes funcionaba?
 
