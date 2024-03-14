@@ -15,17 +15,13 @@ Es mi segundo curso con el Grupo Loyal.
 
 Me apasiona linux y el open source, también tengo algunas certificaciones (LFCA, RHCS, CKA) y la más reciente la de AWS Cloud Practitioner.
 
-Tengo 2 perros rescatados, seguidor de Jesús, amante al buen café colombiano ☕ :coffee: 
-
-Y en mis ratos libres me encanta jugar juegos de mesa y trabajar en mi laboratorio de casa (Synology NAS, Proxmox Cluster, PfSense).
-
 ## Descripción
 
-En este curso de 5 días, exploraremos los fundamentos de Kubernetes y cómo usar AWS EKS para crear y gestionar clústeres de Kubernetes en entornos de desarrollo y prueba. A lo largo del curso, los alumnos obtendrán experiencia práctica mediante ejercicios y proyectos del mundo real.
+En este curso de 5 días, exploraremos los fundamentos de Kubernetes, y cómo gestionar clústeres de Kubernetes en entornos de desarrollo y prueba. A lo largo del curso, obtendrás experiencia práctica mediante ejercicios.
 
 ## Temario
 
-### Día 1: Introducción a Kubernetes y Minikube
+### Introducción a Kubernetes y Minikube
 - Presentación del curso
 - Del monolito al microservicio
 - Repaso sobre contenedores
@@ -33,40 +29,40 @@ En este curso de 5 días, exploraremos los fundamentos de Kubernetes y cómo usa
 - Instalación y configuración de Minikube
 - Creación del primer clúster con Minikube
 
-### Día 2: Pods y Contenedores
+### Pods y Contenedores
 - Concepto de Pods
 - Creación y gestión de contenedores
 - Despliegue de aplicaciones en Pods (Deployment, Replicasets, Daemonsets)
 
-### Día 3: Servicios y Balanceo de Carga
+### Servicios y Balanceo de Carga
 - Servicios en Kubernetes
 - Balanceo de carga en Kubernetes
 - Prácticas con servicios
 
-### Día 4: Almacenamiento y Persistencia
+### Almacenamiento y Persistencia
 - Almacenamiento en Docker y en Kubernetes
 - Volúmenes y persistencia de datos
 - Configuración de almacenamiento persistente
 
-### Día 5: Configurando pods avanzados, node affinity, taints y tolerations.
+### Configurando pods avanzados, node affinity, taints y tolerations.
 - Comandos y argumentos en un pod
 - Variables de ambiente
 - ConfigMaps
 - Configuración con ConfigMaps y Secrets
 
 
-### Día 6: Configuración y Gestión de Recursos
+### Configuración y Gestión de Recursos
 - Configuración de recursos de CPU y memoria
 - Limitación y solicitud de recursos
 - Monitoreo de recursos (Metrics Server)
 - Node Affinity
 - Taints, Tolerations
 
-### Día 7: Mantenimiento del cluster
+### Mantenimiento del cluster
 - Actualizando kubernetes
 - Haciendo backup a ETCD
 
-### Día 8: Seguridad, Diseño de Cluster
+### Seguridad, Diseño de Cluster
 - RBAC (ClusterRoles, SA, Certs)
 - Network Policy
 - Diseño del cluster
@@ -82,21 +78,8 @@ En este curso de 5 días, exploraremos los fundamentos de Kubernetes y cómo usa
 - Conocimiento básico de contenedores y Docker.
 - Tener instalado docker en tu ordenador.
 
-## Guia de usuarios
 
-En el lab, se han creado los usuarios:
-`student1..student10`
-
-Y tenemos un repo de ECR en común: TBD
-
-Además, cada usuario tendra su debido:
-
-AWS_ACCESS_KEY_ID="...."
-AWS_SECRET_ACCESS_KEY="...."
-
-La región por defecto sera **us-east-1**
-
-## Configuración en tu ordenador
+## Configuración en tu ordenador AWS-CLI (opcional)
 
 La idea es que tengas ya descargado el **aws-cli**, si no lo tienes [aquí](https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions) un enlace con más información.
 
