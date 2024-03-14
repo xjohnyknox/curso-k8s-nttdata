@@ -136,6 +136,8 @@ Y ahora el purge:
 
 `multipass purge`
 
+**NOTA:** Si quieres he dejado un script llamado: multipass.sh el cual puedes usar para crear los nodos, instalar k3s, y crear el kube/config con la IP del nodo master.
+
 ## 3-Instalando-docker-(OPCIONAL)
 
 Para los ejercicios introductorios, vamos a ver como funcionan los contenedores, por ende se pone opcional el uso de docker desktop.
