@@ -77,9 +77,15 @@ En este curso de 5 días, exploraremos los fundamentos de Kubernetes, y cómo ge
 
 - Conocimiento básico de contenedores y Docker.
 - Tener instalado docker en tu ordenador.
+- Tener instalado putty o algún tipo de cliente para hacer SSH a un nodo.
 
+## LABORATORIO:
 
-## Configuración en tu ordenador AWS-CLI (opcional)
+El laboratorio puede ser en tu máquina (multipass + Virtualbox), o podemos proveerte de un ambiente en AWS con máquinas listas para conectarte.
+
+Esto lo definiremos en la bienvenida al curso del primer día.
+
+## AWS-CLI (opcional)
 
 La idea es que tengas ya descargado el **aws-cli**, si no lo tienes [aquí](https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-install.html#getting-started-install-instructions) un enlace con más información.
 
