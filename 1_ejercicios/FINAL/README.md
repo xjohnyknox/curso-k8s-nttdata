@@ -5,16 +5,21 @@
 
 ## Preparación del Entorno:
 
-Cada estudiante deberá tener Minikube instalado en su máquina con 2 nodos (minikube start --nodes 2).
+Cada estudiante deberá tener acceso a un cluster de kubernetes con 2 nodos worker y 1 master.
 
 Hacer fork al repo.
 
 Luego del fork si puedes clonar tu nuevo repositorio.
 
-Y sobre tu repo, guardar cambios y respuestas en:
-`./ejercicios/FINAL/`
+`git clone git@github.com:TUUSUARIO/curso-k8s-nttdata.git`
 
-Una vez tengas todos los manifiestos, vas a crear un PR sobre el repo original mio asi:
+Y sobre tu repo, debes crear una carpeta con tus nombres en:
+
+`./ejercicios/FINAL/NombreApellido`
+
+Y allí puedes poner los manifiestos con la solución a los ejercicios planteados.
+
+Una vez tengas todas las soluciones y te asegures que en tu cluster todo funciona bien, vas a crear un Pull Request **(PR)** sobre el repo original así:
 
 ![Alt text](image.png)
 
@@ -33,17 +38,16 @@ Los estudiantes deben crear los manifest necesarios para la solución. Esto incl
 
 ## Documentación:
 
-Puntos adicionales al estudiante que proporcione una documentación apropiada.
+Puntos adicionales al estudiante que proporcione una documentación apropiada y/o uso de kustomize/helm u otra herramienta.
 
 ## Creación del Pull Request (PR):
 
 Cada estudiante debe crear un nuevo branch en el repositorio clonado con su nombre-apellido.
 
-Realizar un commit de los archivos de configuración de la aplicación y la documentación en ese branch.
+Realizar un commit de los archivos de configuración de la aplicación y la documentación.
 
-Crear un PR en tu repositorio principal con una descripción clara y concisa del propósito del PR.
+Crear un PR en tu repositorio principal con tus nombres en la descripción.
 
-No olvides mencionar que se trata del ejercicio final del curso.
 
 ## Evaluación:
 

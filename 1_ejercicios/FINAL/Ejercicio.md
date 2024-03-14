@@ -26,8 +26,8 @@ Crea un pod que use labels:
 
 ## Creando un replicaset:
 
-Crea un manifiesto para tener un RS, que se llame `gb-front-end`
-Y que use esta imagen: `gcr.io/google_samples/gb-frontend:v3`
+Crea un manifiesto para tener un RS, que se llame `frontend`
+Y que use esta imagen: `us-docker.pkg.dev/google-samples/containers/gke/gb-frontend:v5`
 Y que tenga `3 replicas`.
 
 
@@ -58,9 +58,9 @@ Aplica el Binding apropiado a ese ClusterRole para el ejercicio-SA y ejercicio-c
 
 Crea 2 deployments asi:
 
-`app-deployment-1 con 1 replica de la imagen nginx, label: app = deployment1, tier=frontend`
+`app-deployment-1 con 1 replica de la imagen nginx:1.24, label: app = deployment1, tier=frontend`
 .
-`app-deployment-2 con 1 replica de la imagen nginx, label: app = deployment2, tier=backend`
+`app-deployment-2 con 1 replica de la imagen nginx:1.25, label: app = deployment2, tier=backend`
 
 
 
