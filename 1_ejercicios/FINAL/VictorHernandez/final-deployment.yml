@@ -1,0 +1,30 @@
+#kubectl create deployment mi-deployment --image=nginx --dry-run=client -n victor -o yaml -- sleep 3600
+#kubectl label deployment mi-deployment tipo=deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    tipo: deployment
+  name: mi-deployment
+  namespace: victor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tipo: deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        tipo: deployment
+    spec:
+      containers:
+      - command:
+        - sleep
+        - "3600"
+        image: nginx
+        name: nginx
+        resources: {}
+status: {}

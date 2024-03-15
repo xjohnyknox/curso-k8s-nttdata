@@ -1,0 +1,78 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deployment1
+    tier: frontend
+  name: app-deployment-1
+  namespace: victor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment1
+      tier: frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deployment1
+        tier: frontend
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: NotIn
+                values:
+                - "deployment2"
+            topologyKey: kubernetes.io/hostname
+      containers:
+      - image: nginx:1.24
+        name: nginx
+        resources: {}
+status: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deployment2
+    tier: backend
+  name: app-deployment-2
+  namespace: victor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment2
+      tier: backend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deployment2
+        tier: backend
+    spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - "deployment1"
+            topologyKey: kubernetes.io/hostname
+      containers:
+      - image: nginx:1.25
+        name: nginx
+        resources: {}
+status: {}
