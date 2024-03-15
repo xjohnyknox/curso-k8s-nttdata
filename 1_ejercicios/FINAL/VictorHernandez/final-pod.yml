@@ -1,0 +1,19 @@
+#kubectl run victor-pod --image=busybox --labels=ejercicio=final --port=80 --namespace victor --dry-run=client -o yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    ejercicio: final
+  name: victor-pod
+  namespace: victor
+spec:
+  containers:
+  - image: busybox
+    name: victor-pod
+    ports:
+    - containerPort: 80
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

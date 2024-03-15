@@ -1,0 +1,8 @@
+#kubectl create namespace victor --dry-run=client -o yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: null
+  name: victor
+spec: {}
+status: {}
